@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#804fc4"
+  android:gravity="center_horizontal"
+  android:orientation="vertical"
+  tools:context=".PerfilUsuari">
+
+  <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbarPerfil"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme" />
+
+  <ImageView
+    android:id="@+id/imageView"
+    android:layout_width="150sp"
+    android:layout_height="150sp"
+    android:layout_marginTop="50sp"
+    android:src="@drawable/avatar" />
+
+  <TextView
+    android:id="@+id/textNom"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:shadowColor="@color/black"
+    android:shadowDx="1"
+    android:shadowDy="1"
+    android:shadowRadius="2"
+    android:text="Nom: Alex"
+    android:textColor="@color/white"
+    android:textSize="35sp"
+    android:textStyle="bold" />
+
+  <TextView
+    android:id="@+id/textCurs"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:shadowColor="@color/black"
+    android:shadowDx="1"
+    android:shadowDy="1"
+    android:shadowRadius="2"
+    android:text="Curs: DAM"
+    android:textColor="@color/white"
+    android:textSize="35sp"
+    android:textStyle="bold" />
+
+  <TextView
+    android:id="@+id/textUf"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:shadowColor="@color/black"
+    android:shadowDx="1"
+    android:shadowDy="1"
+    android:shadowRadius="2"
+    android:text="Modul: M7"
+    android:textColor="@color/white"
+    android:textSize="35sp"
+    android:textStyle="bold" />
+
+  <TextView
+    android:id="@+id/textM0"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:shadowColor="@color/black"
+    android:shadowDx="1"
+    android:shadowDy="1"
+    android:shadowRadius="2"
+    android:text="UF: 2"
+    android:textColor="@color/white"
+    android:textSize="35sp"
+    android:textStyle="bold" />
+
+</LinearLayout>
