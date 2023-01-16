@@ -2,7 +2,6 @@ package com.example.toolbarproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -12,13 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.SearchView.OnQueryTextListener;
 import androidx.appcompat.widget.Toolbar;
-import java.io.File;
 
 public class ActBuscador extends AppCompatActivity {
 
-  private Toolbar toolbar1;
-  private ListView listView;
-  private String nomFile;
   private ArrayAdapter<String> arrayAdapter;
 
 
@@ -35,7 +30,6 @@ public class ActBuscador extends AppCompatActivity {
     getMenuInflater().inflate(R.menu.menutoolbarsearch, menu);
     MenuItem menuItem = menu.findItem(R.id.test1);
     SearchView searchView = (SearchView) menuItem.getActionView();
-    searchView.setQueryHint("h");
     searchView.setQueryHint("Escriu aqui per buscar");
 
     searchView.setOnQueryTextListener(new OnQueryTextListener() {
@@ -71,13 +65,7 @@ public class ActBuscador extends AppCompatActivity {
   }
 
   private void initItems() {
-    listView = findViewById(R.id.listView);
-    File f = new File("randomWords.txt");
-    if (f.exists()) {
-      Log.i("existe", "existe");
-    } else {
-      Log.i("no existe", "no existe");
-    }
+    ListView listView = findViewById(R.id.listView);
 
     String[] randomWords = {
         "pillow",
@@ -135,7 +123,7 @@ public class ActBuscador extends AppCompatActivity {
     arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, randomWords);
     listView.setAdapter(arrayAdapter);
 
-    toolbar1 = findViewById(R.id.toolbarSearch);
+    Toolbar toolbar1 = findViewById(R.id.toolbarSearch);
     setSupportActionBar(toolbar1);
   }
 
