@@ -44,5 +44,18 @@ public class MainActivity extends AppCompatActivity {
   private void initItems() {
     toolbar1 = findViewById(R.id.toolbar1);
     setSupportActionBar(toolbar1);
+
+    Toolbar toolbar = (Toolbar) findViewById(R.id.card_toolbar);
+    toolbar.setTitle("Card Toolbar");
+    if (toolbar != null) {
+//       inflate your menu
+      toolbar.inflateMenu(R.menu.menutoolbar);
+      toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        @Override
+        public boolean onMenuItemClick(MenuItem menuItem) {
+          return true;
+        }
+      });
+    }
   }
 }
